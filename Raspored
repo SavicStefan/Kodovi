@@ -1,12 +1,15 @@
+23.12.2020
+  -Codeforces dp zadatke
+  -raditi dp + tree(Polgedati i Tree zadatake)
+  -https://codeforces.com/problemset/problem/1336/C (mozda, tezak)
+  -Uvece graph-ove
+  -Pogledati bojenje i funkcionalan graph na usacoguide i uraditi tamo zadatake
+  -TREAP (pogledati za sta sluzi, kako se primenjuje i onda naci implemetaciju)
 22.12.2020.
-  -https://usaco.guide/gold/knapsack#nt (uradio sam prvi)
+  -https://usaco.guide/gold/knapsack#nt (uradio sam prvi, i neke koji nisu nemoguci uraditi u buducnosti ostale bas su teski)
   -https://usaco.guide/gold/paths-grids#problems
   -pogledati linkove u folderu DP
-  -https://codeforces.com/problemset/problem/1336/C (mozda, tezak)
-  -Pogledati bojenje i funkcionalan graph na usacoguide i uraditi tamo zadatake
-  -atcoder problems min 5 
-  -TREAP (pogledati za sta sluzi, kako se primenjuje i onda naci implemetaciju)
-  -Polgedati i Tree zadatake ako ostane vremena
+  -radio codeforces dp zadatak (4)
 21.12.2020.
   -http://www.usaco.org/index.php?page=viewproblem2&cpid=945 (optimizovati)
   -https://codeforces.com/problemset/problem/1458/B
