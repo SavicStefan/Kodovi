@@ -2,8 +2,8 @@
 -Ovaj template tek prvi put kad budemo postali ljubicasti na Codeforces
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
+#include <bits/stdc++.h>
 
-#include<bits/stdc++.h>
 #define fi first
 #define se second
 #define pb push_back
@@ -32,7 +32,13 @@ int main()
    	ios::sync_with_stdio(false);
    	cin.tie(nullptr);
    	cout.tie(nullptr);
-
+	
    	return 0;
 }
+/**
+
+
+
+**/
+
 
