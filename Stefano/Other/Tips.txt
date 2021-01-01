@@ -1,0 +1,55 @@
+1. Manhattan distances
+
+|xi - xj| + |yi - yj| = 
+
+max(xi - xj, xj - xi) + max(yi - yj, yj - yi) = 
+
+max((xi - xj) + (yi - yj), (xi - xj) + (yj - yi), (xj - xi) + (yi - yj), (xj - xi) + (yj - yi)) = 
+
+max(xi + yi - (xj + yj), xi - yi - (xj - yj), -(xi - yi) + (xj - yj), -(xi + yi) + xj + yj) = 
+
+max(|xi + yi - (xj + yj)|, |xi - yi - (xj - yj)|)
+
+zi = xi + yi
+
+wi = xi - yi
+
+|xi - xj| + |yi - yj| = max(|zi - zj|, |wi - wj|)
+
+
+- i=1 ? n i * f(i), f(i) - je broj delioca broja i
+
+
+i=1 ? n i * f(i) = i=1 ? n g(i), g(i) - zbir sadrzalaca broja i
+
+
+y = n / x - koji je najveci
+
+g(i) = x + 2x + 3x + ... + yx = x(1 + 2 + 3 + ... + y) = x * (y + 1) * y / 2;
+
+
+2.
+
+a + b = 2 * (a & b) + a ^ b
+
+
+a + b - (a ^ b) = 2 * (a & b)
+
+a + b == a ^ b, akko a & b == 0 -> da a i b nemaju ni jedan bit gde obojica imaju jedinicu.
+
+
+
+
+Ponekad treba jednu stvar fiksirati i gledati na to kao const. 
+
+NPR. Kada trazimo najv - najm, pod nekim uslovimas
+
+
+3.
+Ako hocemo da vidimo za svaku granu u tree-u koliko puteva prolazi kroz tu grana:
+Ako je grana (u, v) -> min(cnt[u], cnt[v]) * (n - min(cnt[u], cnt[v])), gde je cnt broj dece u subtree-u
+
+
+4.The path between two nodes will have odd number of edges iff they are on levels of different parity (level being the distance from the root). So, to calculate "o", calculate the number of odd-level nodes and the number of even-level nodes, and multiply them.
+
+5. Suma svih puteva je jednaka Sumi svih cnt[v] * (n - cnt[v]).

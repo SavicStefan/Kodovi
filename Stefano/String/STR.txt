@@ -1,0 +1,20 @@
+// Suffix array
+int sa[maxn];
+int as[maxn][20];
+array<int,3> help[maxn];
+void build_sa(string x){
+    int len = x.size();
+    ff(i,0,len - 1)as[i][0] = x[i] - 'a' + 1;
+    ff(j,1,19){
+        ff(i,0,len - 1){
+            help[i][0] = as[i][j - 1];
+            help[i][1] = (i + (1 << (j - 1)) < len ? as[i + (1 << (j - 1))][j - 1] : -1);
+            help[i][2] = i;
+        }
+        sort(help, help + len);
+        ff(i,0,len - 1)as[help[i][2]][j] = (i > 0 && (help[i][0] == help[i - 1][0]) && (help[i][1] == help[i - 1][1]) ? as[help[i - 1][2]][j] : i);
+    }
+    ff(i,0,len - 1)sa[as[i][19]] = i;
+//    ff(i,0,len - 1)cout << sa[i] << " ";
+//    cout << endl;
+}

@@ -1,0 +1,99 @@
+//Sieve of eratosthenes - O(nloglogn)
+int sieve[(int)1e6 + 5];
+void Sieve(){
+   for(int i=2;i*i<=(int)1e6;i++){
+      if(sieve[i])continue;
+      for(int j=i*i;j<=(int)1e6;j+=i)sieve[j] = 1;
+   }
+}
+
+
+
+//Number of prime facto in factorization
+1*First, we use Sieve of Eratosthenes to find a prime diviser of each of these numbers
+int pros[N];
+void Prosti_fac(){
+	for(int i=2;i<N;i++){
+        if(pros[i])continue;
+        for(int j=i;j<N;j+=i){
+            if(!pros[j])pros[j] = i;
+        }
+    }
+}
+2* For all number in range 1 to N, this is formula.
+dp[1] = 0;
+for(int i=2;i<N;i++)dp[i] = 1 + dp[i/sieve[i]];
+for(int i=2;i<N;i++)dp[i] += dp[i-1];
+
+
+//Find how many divisior have all number 
+int divs[(int)1e6 + 5];
+void div(){
+    divs[0] = 0;
+    for(int i=1;i<=(int)1e6;i++){
+        for(int j=i;j<=(int)1e6;j+=i)divs[j]++;
+    }
+}
+
+
+//Fermat's theorem
+x^(m-1) mod m = 1
+m is prime and __gcd(x,m) = 1
+x^k mod m = x^(k mod (m-1)) mod m
+
+
+//Euler's theorem 
+x^(fi(m)) mod m = 1
+__gcd(x,m) = 1
+
+if m is prime -> fi(m) = m-1
+
+
+//Phi funtion
+ll phi(ll x) {
+    if(x == 1)return 0;
+    ll br = 2, pom = x, rez = 1;
+    while(br * br <= pom){
+      if(x%br == 0){
+         ll sad = 1;
+         while(x%br == 0){
+            sad *= br;
+            x /= br;
+         }
+         rez *= (sad - (sad/br));
+      }
+      br++;
+    }
+    if(x > 1)rez *= (x - 1);
+    return rez;
+}
+
+
+//Modular arithmetic function 
+ll fak[maxn];
+ll invz[maxn];
+ll add(ll a, ll b){
+    return (a + b) % mod;
+}
+ll mul(ll a, ll b){
+    return (a * b) % mod;
+}
+ll power(ll a, ll b){
+    if(!b)return 1;
+    ll pola = power(a, b / 2);
+    pola = mul(pola, pola);
+    if(b % 2)pola = mul(pola, a);
+    return pola;
+}
+ll inv(ll a){
+    return power(a, mod - 2);
+}
+ll bin(int a, int b){
+    return mul(fak[a], mul(invz[b], invz[a - b]));
+}
+void init(){
+    fak[0] = 1;
+    ff(i,1,maxn - 1)fak[i] = mul(fak[i - 1], i);
+    invz[maxn - 1] = inv(fak[maxn - 1]);
+    fb(i,maxn - 2, 0)invz[i] = mul(invz[i + 1], i + 1);
+}

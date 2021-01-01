@@ -1,0 +1,14 @@
+https://codeforces.com/blog/entry/67679
+
+https://codeforces.com/blog/entry/47764
+
+- DP + bitmask
+https://codeforces.com/blog/entry/337
+
+https://codeforces.com/blog/entry/81516
+
+https://discuss.codechef.com/t/dynamic-programming-problems-with-bitmasking/1393
+
+https://discuss.codechef.com/search/?csrfmiddlewaretoken=c355679acafbcc6467461188e88f3c57&q=bitmask&t=question
+
+https://github.com/SuprDewd/T-414-AFLV/tree/master/06_dynamic_programming
