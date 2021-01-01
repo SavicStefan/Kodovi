@@ -1,8 +1,3 @@
-https://codeforces.com/problemset?tags=graphs,1800-1800
-https://codeforces.com/problemset/problem/219/D
-https://codeforces.com/problemset/problem/1093/D
-https://codeforces.com/problemset/problem/1144/F
-
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 #include <bits/stdc++.h>
