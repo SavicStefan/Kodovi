@@ -53,3 +53,5 @@ Ako je grana (u, v) -> min(cnt[u], cnt[v]) * (n - min(cnt[u], cnt[v])), gde je c
 4.The path between two nodes will have odd number of edges iff they are on levels of different parity (level being the distance from the root). So, to calculate "o", calculate the number of odd-level nodes and the number of even-level nodes, and multiply them.
 
 5. Suma svih puteva je jednaka Sumi svih cnt[v] * (n - cnt[v]).
+
+6. https://atcoder.jp/contests/abc186/editorial/422
