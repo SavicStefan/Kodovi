@@ -7,7 +7,18 @@ void Sieve(){
    }
 }
 
-
+// Extended Euclidean algoritham - ax + by = gcd(a, b)
+int x, y;
+int extended_euclidean(int a, int b, int& x, int& y){
+	if(b == 0){
+		x = 1, y = 0;
+		return a;
+	}
+	int x1, y1;
+	int d = extended_euclidean(b, a % b, x1, y1);
+	x = y1, y = x1 - y1 * (a / b);
+	return d;
+}
 
 //Number of prime facto in factorization
 1*First, we use Sieve of Eratosthenes to find a prime diviser of each of these numbers
@@ -35,6 +46,7 @@ void div(){
     }
 }
 
+// 
 
 //Fermat's theorem
 x^(m-1) mod m = 1
@@ -97,3 +109,4 @@ void init(){
     invz[maxn - 1] = inv(fak[maxn - 1]);
     fb(i,maxn - 2, 0)invz[i] = mul(invz[i + 1], i + 1);
 }
+
