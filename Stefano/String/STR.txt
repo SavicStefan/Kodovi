@@ -1,3 +1,12 @@
+// Hash
+const int p = 31 // za mala slova
+const int p = 53 // za velika slova
+   ll pw = 1;
+   ff(i,0,n - 1){
+      hsh[i + 1] = add(hsh[i], mul(pw, s[i] - 'a' + 1));
+      pw = mul(pw, p);
+   }
+
 // Suffix array
 int sa[maxn];
 int as[maxn][20];
