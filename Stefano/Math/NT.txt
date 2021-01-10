@@ -110,3 +110,4 @@ void init(){
     fb(i,maxn - 2, 0)invz[i] = mul(invz[i + 1], i + 1);
 }
 
+// Bézout's identity — Let a and b be integers with greatest common divisor d. Then there exist integers x and y such that ax + by = d. More generally, the integers of the form ax + by are exactly the multiples of d.
