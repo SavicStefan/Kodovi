@@ -131,7 +131,7 @@ ll kveri(int v, int tl, int tr, int l, int r){
 
 
 
-//Persistent 
+//Persistent v1
 int idx = 1;
 ll bor[4*maxn];
 int root[maxn], ls[maxn], rs[maxn];
@@ -168,30 +168,31 @@ int kveri(int v, int tl, int tr, int l, int r){
     return kveri(ls[v],tl,mid,l,r) + kveri(rs[v],mid+1,tr,l,r);
 }
 
-// Za redom kveri - Persisent 
+// Persisent v2 
 int idx = 0;
-ll bor[50*maxn];
-int root[50*maxn], ls[50*maxn], rs[50*maxn];
-void update(int v, int rv, int tl, int tr, int poz, int vre) {
+ll bor[20*maxn];
+int root[20*maxn], ls[20*maxn], rs[20*maxn];
+void build(int &v, int tl, int tr){
+    if(!v)v = ++idx;
     if(tl == tr){
-        bor[v] = bor[rv] + vre;
+        bor[v] = 0;
         return;
     }
     int mid = (tl + tr) / 2;
-    if(poz <= mid){
-        ls[v] = ++idx; rs[v] = rs[rv];
-        update(ls[v],ls[rv],tl,mid,poz,vre);
-    }else{
-        ls[v] = ls[rv];rs[v] = ++idx;
-        update(rs[v],rs[rv],mid+1,tr,poz,vre);
-    }
-    bor[v] = bor[ls[v]] + bor[rs[v]];
+    build(ls[v], tl, mid);
+    build(rs[v], mid+1, tr);
+    bor[v] = max(bor[ls[v]], bor[rs[v]]);
 }
-int kveri(int v, int tl, int tr, int l, int r){
-    if(tl > r || l > tr)return 0;
-    if(l <= tl && r >= tr)return bor[v];
+void update(int &v, int tl, int tr, int poz, ll vre) {
+    if(!v)v = ++idx;
+    if(tl == tr){
+        bor[v] = max(bor[v], vre);
+        return;
+    }
     int mid = (tl + tr) / 2;
-    return kveri(ls[v],tl,mid,l,r) + kveri(rs[v],mid+1,tr,l,r);
+    if(poz <= mid)update(ls[v],tl,mid,poz,vre);
+    else update(rs[v],mid+1,tr,poz,vre);
+    bor[v] = max(bor[ls[v]], bor[rs[v]]);
 }
 
 
