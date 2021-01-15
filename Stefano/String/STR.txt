@@ -1,11 +1,25 @@
 // Hash
 const int p = 31 // za mala slova
 const int p = 53 // za velika slova
+const int mod = 1e9 + 9; // sad cu probati da li moze 1e9 + 7;
+int hsh[maxn];
+void hes(string a){
    ll pw = 1;
-   ff(i,0,n - 1){
-      hsh[i + 1] = add(hsh[i], mul(pw, s[i] - 'a' + 1));
+   ff(i,1,n){
+      hsh[i] = add(hsh[i - 1], mul(pw, s[i] - 'a' + 1));
       pw = mul(pw, p);
    }
+}
+
+int hes(string a){
+    ll pw = 1;
+    int hes = 0;
+    ff(i,0,sz(a) - 1){
+        hes = add(hes, mul(pw, a[i] - 'a' + 1));
+        pw = mul(pw, p);
+    }
+    return hes;
+}
 
 // Suffix array
 int sa[maxn];
