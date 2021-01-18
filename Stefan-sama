@@ -50,6 +50,9 @@ pair<ll,int> Solve(int C,int n){
 	return {dp[n],cnt[n]};
 }*/
 
+// tourist treap and splay: https://codeforces.com/contest/847/status/D?friends=on
+//geometry template: https://codeforces.com/contest/280/submission/3275722
+
 
 // Temp
 #include <ext/pb_ds/assoc_container.hpp>
