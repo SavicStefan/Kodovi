@@ -1,0 +1,51 @@
+// Convex hull optimizacija (valjda)
+/*struct Line{
+	ll n,k;
+	int cnt;
+	Line(){}
+	Line(ll a,ll b,int c):n(a),k(b),cnt(c){}
+	ll Get(ll x){return x*k+n;}
+};
+int sec(Line a,Line b){
+	ll p=a.n-b.n;
+	ll q=b.k-a.k;
+	if(q<0)p=-p,q=-q;
+	if(p<0)return p/q;
+	else return (p+q-1)/q;
+}
+vector<Line> hull;
+void AddLine(Line l){
+	int sz=hull.size();
+	while(sz>1 && sec(hull[sz-2],hull[sz-1])>sec(hull[sz-1],l)){
+		sz--;
+		hull.pop_back();
+	}
+	hull.pb(l);sz++;
+}
+pair<ll,int> Get(ll x){
+	int bot=1,top=(int)hull.size()-1,mid,ans=0;
+	while(top>=bot){
+		int mid=bot+top>>1;
+		if(hull[mid-1].Get(x)<hull[mid].Get(x))ans=mid,bot=mid+1;
+		else top=mid-1;
+	}
+	return {hull[ans].Get(x),hull[ans].cnt};
+}
+ll dp[N];
+int cnt[N];
+void Push(int L){
+	AddLine(Line(dp[L]+sum[L]*(L+1)-pre[L],(L+1),cnt[L]));
+}
+pair<ll,int> Solve(int C,int n){
+	hull.clear();
+	dp[0]=0;
+	cnt[0]=0;
+	Push(0);
+	for(int i=1;i<=n;i++){
+		pair<ll,int> now=Get(-sum[i]);
+		dp[i]=now.first+pre[i]+C;
+		cnt[i]=now.second+1;
+		Push(i);
+	}
+	return {dp[n],cnt[n]};
+}*/
