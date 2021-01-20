@@ -1,3 +1,5 @@
+Graph admits an orientation to a strongly connected digraph if and only if every edge is part of what a cycle.
+
 //DFS:
 void dfs(int v){
 	visited[v] = 1;
