@@ -1,4 +1,8 @@
 Graph admits an orientation to a strongly connected digraph if and only if every edge is part of what a cycle.
+Dokaz: Kad imamo SCC mi mozemo SCC da zemenimo samo jednim cvorom, nas cilj je ovde da ceo graf zamenimo jednim cvorom.
+Ako imam cycle, svaki cvor tog cycle moze da stigne tamo gde mogu i sve ostale, tako da mozemo da zamenim sa jednim cvorom. 
+Iz ovoga sledi da bi mogli da napravimo samo jedan cvor od takog grafa, mora svaki cvor da pripada barem jednom cycle kako bi mogli 
+da zemenimo cycle jednim cvorom.
 
 //DFS:
 void dfs(int v){
@@ -176,7 +180,11 @@ int in[maxn];
 bool visited[maxn];
 void dfs(int v, int p){
     low[v] = in[v] = ++timer;
-    for(auto u : g[v]){
+    visited[v] = 1;
+    for(auto c : g[v]){
+        int u = c.fi;
+        int id = c.se;
+        if(u == p)continue;
         if(!visited[u]){
             dfs(u, v);
             low[v] = min(low[v], low[u]);
