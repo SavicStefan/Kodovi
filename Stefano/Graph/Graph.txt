@@ -169,6 +169,22 @@ void dfs(int v, int p){
     }
 }
 
+// Bridges
+int timer = 0;
+int low[maxn];
+int in[maxn];
+bool visited[maxn];
+void dfs(int v, int p){
+    low[v] = in[v] = ++timer;
+    for(auto u : g[v]){
+        if(!visited[u]){
+            dfs(u, v);
+            low[v] = min(low[v], low[u]);
+            if(low[u] > in[v])ivo_andric();
+        }
+        else low[v] = min(low[v], low[u]);
+    }
+}
 
 //Detect if given directed graph have a cycle - if you have back edges then you have cycle
 bool krug = 0;
