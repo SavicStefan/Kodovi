@@ -430,7 +430,7 @@ void decompose(int v, int p){
 }
 
 
-// Euler tour magic - for query on path (u, v)
+// Euler tour magic - for query, sum of path from (root, v)
 
 int n, q;
 int niz[maxn];
