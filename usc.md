@@ -34,7 +34,7 @@
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=622) | cbarn2        | DP                               |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=623) | fencedin      | MST                              |    |
 | 2016 Open | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=645) | split         | 2P                               |    |
-|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=646) | closing       | DSU                              |    |
+|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=646) | closing       | DSU                              |  Done  |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=647) | 248           | DP                               |    |
 
 | Contest   | #                                                              | Name          | Topic                            | Result |
