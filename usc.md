@@ -43,7 +43,7 @@
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=670) | checklist     | DP                               |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=671) | lasers        | BFS                              |    |
 | 2017 Jan  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=693) | bphoto        | BIT                              |    |
-|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=694) | hps           | DP                               |    |
+|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=694) | hps           | DP                               |  Done  |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=695) | cownav        | BFS                              |    |
 | 2017 Feb  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=717) | visitfj       | SP                               |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=718) | nocross       | DP                               |    |
@@ -61,7 +61,7 @@
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=791) | spainting     | DP                               |    |
 | 2018 Feb  | [1](http://www.usaco.org/index.php?page=viewproblem&cpid=801)  | snowboots     | Set                              |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem&cpid=802)  | dirtraverse   | DFS                              |    |
-|           | [3](http://www.usaco.org/index.php?page=viewproblem&cpid=803)  | taming        | DP                               |    |
+|           | [3](http://www.usaco.org/index.php?page=viewproblem&cpid=803)  | taming        | DP                               |  Done  |
 | 2018 Open | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=837) | sort          | BIT / BinSearch                  |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=838) | milkorder     | TopoSort / BinSearch             |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=839) | talent        | DP                               |    |
@@ -77,7 +77,7 @@
 | 2019 Feb  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=921) | cowland       | LCA / SegTree                    |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=922) | dishes        | Map                              |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=923) | paintbarn     | DP / LineSweep                   |    |
-| 2019 Open | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=945) | snakes        | DP                               |    |
+| 2019 Open | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=945) | snakes        | DP                               |  Done  |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=946) | walk          | MST / Math                       |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=947) | balance       | 2P / Math                        |    |
 
