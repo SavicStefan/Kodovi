@@ -46,7 +46,7 @@
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=694) | hps           | DP                               |  Done  |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=695) | cownav        | BFS                              |    |
 | 2017 Feb  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=717) | visitfj       | SP                               |    |
-|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=718) | nocross       | DP                               |    |
+|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=718) | nocross       | DP                               |  Done  |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=719) | circlecross   | BIT                              |    |
 | 2017 Open | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=741) | cownomics     | 2P / Hashing                     |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=743) | art2          | Stack                            |    |
