@@ -42,7 +42,7 @@
 | 2016 Dec  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=669) | moocast       | BinSearch                        |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=670) | checklist     | DP                               |  Done  |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=671) | lasers        | BFS                              |    |
-| 2017 Jan  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=693) | bphoto        | BIT                              |    |
+| 2017 Jan  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=693) | bphoto        | BIT                              |  Done  |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=694) | hps           | DP                               |  Done  |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=695) | cownav        | BFS                              |    |
 | 2017 Feb  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=717) | visitfj       | SP                               |    |
