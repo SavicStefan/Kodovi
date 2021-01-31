@@ -40,7 +40,7 @@
 | Contest   | #                                                              | Name          | Topic                            | Result |
 | --------- | -------------------------------------------------------------- | ------------- | -------------------------------- | ------ |
 | 2016 Dec  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=669) | moocast       | BinSearch                        |    |
-|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=670) | checklist     | DP                               |    |
+|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=670) | checklist     | DP                               |  Done  |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=671) | lasers        | BFS                              |    |
 | 2017 Jan  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=693) | bphoto        | BIT                              |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=694) | hps           | DP                               |  Done  |
