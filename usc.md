@@ -64,7 +64,7 @@
 |           | [3](http://www.usaco.org/index.php?page=viewproblem&cpid=803)  | taming        | DP                               |  Done  |
 | 2018 Open | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=837) | sort          | BIT / BinSearch                  |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=838) | milkorder     | TopoSort / BinSearch             |    |
-|           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=839) | talent        | DP                               |    |
+|           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=839) | talent        | DP                               |  Done  |
 
 | Contest   | #                                                              | Name          | Topic                            | Result |
 | --------- | -------------------------------------------------------------- | ------------- | -------------------------------- | ------ |
