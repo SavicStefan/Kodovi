@@ -80,7 +80,7 @@
 | 2019 Open | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=945) | snakes        | DP                               |  Done  |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=946) | walk          | MST / Math                       |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=947) | balance       | 2P / Math                        |    |
-| 2019 Dec  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=969) | pump          |                                  |  Done  |
+| 2019 Dec  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=969) | pump          |                                  |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=970) | milkvisits    |                                  |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=971) | cowmbat       | DP                               |  Done  |
 
