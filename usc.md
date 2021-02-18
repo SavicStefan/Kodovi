@@ -24,7 +24,7 @@
 
 | Contest   | #                                                              | Name          | Topic                            | Result |
 | --------- | -------------------------------------------------------------- | ------------- | -------------------------------- | ------ |
-| 2015 Dec  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=573) | cardgame      | BinSearch                        |    |
+| 2015 Dec  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=573) | cardgame      | BinSearch                        |  Done  |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=574) | feast         | DP                               |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=575) | dream         | BFS                              |    |
 | 2016 Jan  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=597) | angry         | BinSearch                        |    |
@@ -56,10 +56,10 @@
 | 2017 Dec  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=765) | piepie        | BFS                              |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=766) | barnpainting  | DP / Tree                        |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=767) | hayfeast      | Deque                            |    |
-| 2018 Jan  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=789) | mootube       | DSU                              |    |
+| 2018 Jan  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=789) | mootube       | DSU                              |  Done  |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=790) | atlarge       | DFS                              |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=791) | spainting     | DP                               |    |
-| 2018 Feb  | [1](http://www.usaco.org/index.php?page=viewproblem&cpid=801)  | snowboots     | Set                              |    |
+| 2018 Feb  | [1](http://www.usaco.org/index.php?page=viewproblem&cpid=801)  | snowboots     | Set                              |  Done  |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem&cpid=802)  | dirtraverse   | DFS                              |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem&cpid=803)  | taming        | DP                               |  Done  |
 | 2018 Open | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=837) | sort          | BIT / BinSearch                  |    |
@@ -72,8 +72,8 @@
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=862) | cowpatibility | Hashing / PIE / Bitset           |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=863) | teamwork      | DP                               |  Done  |
 | 2019 Jan  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=897) | poetry        | DP / Math                        |        |
-|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=898) | sleepy        | BIT                              |        |
-|           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=899) | shortcut      | SP                               |        |
+|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=898) | sleepy        | BIT                              |    Done    |
+|           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=899) | shortcut      | SP                               |    Done    |
 | 2019 Feb  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=921) | cowland       | LCA / SegTree                    |    |
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=922) | dishes        | Map                              |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=923) | paintbarn     | DP / LineSweep                   |    |
@@ -81,7 +81,7 @@
 |           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=946) | walk          | MST / Math                       |    |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=947) | balance       | 2P / Math                        |    |
 | 2019 Dec  | [1](http://www.usaco.org/index.php?page=viewproblem2&cpid=969) | pump          |                                  |    |
-|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=970) | milkvisits    |                                  |    |
+|           | [2](http://www.usaco.org/index.php?page=viewproblem2&cpid=970) | milkvisits    |                                  |  Done  |
 |           | [3](http://www.usaco.org/index.php?page=viewproblem2&cpid=971) | cowmbat       | DP                               |  Done  |
 
 Note: Don't expect a repeat of cowland (SegTree, LCA usually restricted to plat).
