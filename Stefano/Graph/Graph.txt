@@ -238,7 +238,8 @@ void dfs(int v, int p){
 }
 
 
-// Topological sorting
+
+// Topological sorting - uvek mi daje order tako da ne stvori cycle i ako ima cycle od je sz(topo) != n
 vector<int> topo;
 int indeg[maxn];
 void toposort(){
