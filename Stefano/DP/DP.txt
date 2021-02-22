@@ -1,5 +1,7 @@
 Tips DP:
 
+- Kada imas da nadjes za koje sve vazi po N, nekad mozes da gledas kao za koje minimalno N ovo vazi.
+
 - DP + bitmask:
 	- Tamo gde treba da se gleda nesto min ili max, a dati su nake dva clana npr, (u, v), onda gledati kao 
 	dp[i][mask] - ako krece u i, i koristi skup mask. Primer: 
