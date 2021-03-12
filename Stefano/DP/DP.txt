@@ -1,53 +1,30 @@
-Tips DP:
-
-- Kada imas da nadjes za koje sve vazi po N, nekad mozes da gledas kao za koje minimalno N ovo vazi.
-
-- DP + bitmask:
-	- Tamo gde treba da se gleda nesto min ili max, a dati su nake dva clana npr, (u, v), onda gledati kao 
-	dp[i][mask] - ako krece u i, i koristi skup mask. Primer: 
-		-https://codeforces.com/problemset/problem/580/D, (pogledati zadnji subbmision), 						-https://www.hackerearth.com/practice/algorithms/dynamic-programming/bit-masking/tutorial/ (skroz dole)
-		
-
-- Subset sum dp 
-
-bitset<maxn> dp;
-
-dp |= (dp << x);
-
-- SOS
-// SOS
-
-int n;
-int niz[(1 << 10)];
-
-int dp[(1 << 10)];
-
-// partial(S, k) - suma ako u skupu S, brisemo samo elemente iz skupa [0,k]
-// partial(S, k) = partial(S, k - 1) + partial({S \ {k}, k - 1) ako k pripada S
-// partial(S, k - 1) - obezbedimo zbirom dp[mask] += dp[mask ^ (1 << i)]
-// partial(S \ {k}, k - 1) - obezbedimo posto dp[mask ^ (1 << i)] je izracunao nekad pre i-tog posthto on nema i-ti bit
-// samim tim mozemo u jednodimenzionalnom nizu da resim SOS
-
-int main()
-{
-   ios::sync_with_stdio(false);
-   cout.tie(nullptr);
-   cin.tie(nullptr);
-   cin >> n;
-   ff(mask,0,(1 << n) - 1)cin >> niz[mask];
-   ff(mask,0,(1 << n) - 1)dp[mask] = niz[mask];
-   ff(i,0,n - 1){
-      ff(mask,0,(1 << n) - 1){
-         if(mask & (1 << i))dp[mask] += dp[mask ^ (1 << i)];
-      }
-   }
-   cout << dp[(1 << n) - 1] << endl;
-   return 0;
-}
-/**
-
-3
-3 1 4 5 5 1 3 3
-
-**/
-
+// Convex hull trick - nije provereno
+typedef long double ldb;
+struct point{
+	ll px;
+	ll py;
+};
+struct cht{
+	vector<point> hull;
+	ldb cross(point a, point b){
+		return ((ldb)(b.py - a.py) / (b.px - a.px));
+	}
+	void add_line(int x, ll y, int z){
+		while(hull.size() >= 2 && cross(hull[sz(hull) - 2], hull.back()) > cross(hull.back(), {x, y})){
+			hull.pop_back();
+		}
+		hull.push_back({x, y});
+	}
+	ll query(int x){
+		auto f = [&](int p){
+			return hull[p].px * x + hull[p].py;
+		};
+		int l = 0, r = sz(hull) - 1;
+		while(l < r){
+			int mid = (l + r) / 2;
+			if(f(mid) <= f(mid + 1))r = mid;
+			else l = mid + 1;
+		}
+		return f(l);
+	}
+}cht;
