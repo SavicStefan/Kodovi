@@ -22,23 +22,96 @@ int hes(string a){
     return hes;
 }
 
-// Suffix array
-int sa[maxn];
-int as[maxn][20];
-array<int,3> help[maxn];
-void build_sa(string x){
-    int len = x.size();
-    ff(i,0,len - 1)as[i][0] = x[i] - 'a' + 1;
-    ff(j,1,19){
-        ff(i,0,len - 1){
-            help[i][0] = as[i][j - 1];
-            help[i][1] = (i + (1 << (j - 1)) < len ? as[i + (1 << (j - 1))][j - 1] : -1);
-            help[i][2] = i;
-        }
-        sort(help, help + len);
-        ff(i,0,len - 1)as[help[i][2]][j] = (i > 0 && (help[i][0] == help[i - 1][0]) && (help[i][1] == help[i - 1][1]) ? as[help[i - 1][2]][j] : i);
-    }
-    ff(i,0,len - 1)sa[as[i][19]] = i;
-//    ff(i,0,len - 1)cout << sa[i] << " ";
-//    cout << endl;
+// Rabin-Karp - hesh 
+
+// Suffix Array - O(n log^2 n)
+vector<int> buildSuffixArray(string a){
+	a += '$';
+	int N = sz(a);
+	vector<int> p(N);
+	vector<int> sa(N);
+	vector<pair<pii,int>> pomsa(N);
+	{
+		ff(i,0,N - 1)pomsa[i] = {{a[i] - 'a', 0}, i};
+		sort(all(pomsa));
+		p[pomsa[0].se] = 0;
+		ff(i,1,N - 1){
+			if(pomsa[i].fi == pomsa[i - 1].fi)p[pomsa[i].se] = p[pomsa[i - 1].se];
+			else p[pomsa[i].se] = p[pomsa[i - 1].se] + 1;
+		}
+		ff(i,0,N - 1)sa[i] = pomsa[i].se;
+	}
+	int k = 1;
+	while((1 << k) <= N){
+		ff(i,0,N - 1)pomsa[i] = {{p[i], p[(i + (1 << (k - 1))) % N]}, i};
+		sort(all(pomsa));
+		p[pomsa[0].se] = 0;
+		ff(i,1,N - 1){
+			if(pomsa[i].fi == pomsa[i - 1].fi)p[pomsa[i].se] = p[pomsa[i - 1].se];
+			else p[pomsa[i].se] = p[pomsa[i - 1].se] + 1;
+		}
+		ff(i,0,N - 1)sa[i] = pomsa[i].se;
+		k += 1;
+	}
+	return sa;
+}
+
+// Za O(n log n) - SuffixArray
+void radix_sort(vector<pair<pii,int>> &a){
+	int N = sz(a);
+	{
+		vector<int> cnt(N);
+		for(auto c : a)cnt[c.fi.se] += 1;
+		vector<pair<pii,int>> nwa(N);
+		vector<int> pos(N);
+		pos[0] = 0;
+		ff(i,1,N - 1)pos[i] = pos[i - 1] + cnt[i - 1];
+		for(auto c : a){
+			int id = c.fi.se;
+			nwa[pos[id]] = c;
+			pos[id] += 1;
+		}
+		a = nwa;
+	}
+	{
+		vector<int> cnt(N);
+		for(auto c : a)cnt[c.fi.fi] += 1;
+		vector<pair<pii,int>> nwa(N);
+		vector<int> pos(N);
+		pos[0] = 0;
+		ff(i,1,N - 1)pos[i] = pos[i - 1] + cnt[i - 1];
+		for(auto c : a){
+			int id = c.fi.fi;
+			nwa[pos[id]] = c;
+			pos[id] += 1;
+		}
+		a = nwa;
+	}
+}
+
+// Manacher - najveci palindrom (tehnicki)
+void Manacher(string a){
+	int N = sz(a);
+	vector<int> d1(N);
+	int L = 0, R = -1;
+	ff(i,0,N - 1){
+		int k = (i > R ? 1 : min(d1[L + R - i], R - i + 1));
+		while(i >= k && i + k < N && a[i - k] == a[i + k])k += 1;
+		d1[i] = k--;
+		if(i + k > R){
+			L = i - k;
+			R = i + k;
+		}
+	}
+	vector<int> d2(N);
+	L = 0, R = -1;
+	ff(i,0,N - 1){
+		int k = (i > R ? 0 : min(d2[L + R - i + 1], R - i + 1));
+		while(i > k && i + k < N  && a[i - k - 1] == a[i + k])k += 1;
+		d2[i] = k--;
+		if(i + k > R){
+			L = i - k - 1;
+			R = i + k;	
+		}
+	}
 }
