@@ -13,3 +13,15 @@ ll query(int x){
 	}
 	return sum;
 }
+
+// lower bound fenwik
+int lwb(int x) {
+	int sum = 0, ans = 0;
+	fb(i,20,0) {
+		if(ans + (1 << i) <= N && sum + dud[ans + (1 << i)] <= x) {
+			sum += dud[ans + (1 << i)];
+			ans += (1 << i);
+		}
+	}
+	return ans;
+}
