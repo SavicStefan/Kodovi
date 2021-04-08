@@ -1,13 +1,13 @@
 typedef long double ldb;
-struct point {
+struct line {
 	ll px, py;
 };
 
 // za min
 struct CHT {
-	vector<point> hull;
+	vector<line> hull;
 
-	ldb cross(point x, point y) {
+	ldb cross(line x, line y) {
 		return ((ldb)(x.py - y.py) / (y.px - x.px));
 	}
 
