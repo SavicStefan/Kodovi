@@ -1,3 +1,8 @@
+typedef long double ldb;
+struct point {
+	ll px, py;
+};
+
 // za min
 struct CHT {
 	vector<point> hull;
