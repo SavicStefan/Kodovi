@@ -1,28 +1,26 @@
 typedef long double ldb;
 struct line {
-	ll px, py;
+	ll k, b;
 };
 
-// za min
 struct CHT {
 	vector<line> hull;
 
 	ldb cross(line x, line y) {
-		return ((ldb)(x.py - y.py) / (y.px - x.px));
+		return (ldb)(y.b - x.b) / (x.k - y.k);
 	}
 
-	// < - opadajuce, > - rastuce
-	void add_line(ll x, ll y) {
-		while(sz(hull) >= 2 && cross(hull.back(), {x, y}) < cross(hull[sz(hull) - 2], hull.back())) {
+	void add_line(line x) {
+		while(sz(hull) >= 2 && cross(hull.back(), x) < cross(hull[sz(hull) - 2], hull.back())) {
 			hull.pop_back();
 		}
-		hull.pb({x, y});
+		hull.pb(x);
 	}
 
-	ll kwe(ll x) {
+	ll get(int x) {
 
 		auto f = [&] (int id) {
-			return hull[id].px * x + hull[id].py;
+			return hull[id].k * x + hull[id].b;
 		};
 
 		int l = 0, r = sz(hull) - 1;
@@ -32,5 +30,7 @@ struct CHT {
 			else r = mid;
 		}
 		return f(l);
+
 	}
+
 };
