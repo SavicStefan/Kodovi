@@ -24,7 +24,7 @@ void propagate(int v, int tl, int tr) {
 
 void lazyupd(int v, int tl, int tr, int l, int r, ll val) {
 	propagate(v, tl, tr);
-	if(tr > tl || tl > r || tr < l)return;
+	if(tl > tr || tl > r || tr < l)return;
 	if(tl >= l && tr <= r) {
 		bor[v] += val;
 		if(tl != tr) {
