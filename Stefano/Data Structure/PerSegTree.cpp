@@ -1,7 +1,7 @@
 int idx = 0;
 int root[20 * maxn], ls[20 * maxn], rs[20 * maxn], bor[20 * maxn];
 void update(int &v, int rv, int tl, int tr, int pos, int x) {
-    v= ++idx, ls[v] = ls[rv], rs[v] = rs[rv], bor[v] = bor[rv];
+    v = ++idx, ls[v] = ls[rv], rs[v] = rs[rv], bor[v] = bor[rv];
     if(tl == tr) {
         bor[v] += x;
         return;
