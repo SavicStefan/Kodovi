@@ -11,6 +11,8 @@ if p = LCA(u, v) ( (u,v) is path you are currently working with) and in[u] <= in
 
 In both cases you need to considered only nodes that appears 1 time
 
+Example code: https://ideone.com/6NVoPD
+Blog: https://codeforces.com/blog/entry/43230
 
 */
 
