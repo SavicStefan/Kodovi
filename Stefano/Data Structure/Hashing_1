@@ -1,0 +1,14 @@
+const int p = 31;
+ll pw[maxn];
+ll invz[maxn];
+void init_hsh() {
+	pw[0] = 1;
+	ff(i,1,maxn - 1)pw[i] = mul(pw[i - 1], p);
+	invz[maxn - 1] = inv(pw[maxn - 1]);
+	fb(i,maxn - 2, 0)invz[i] = mul(invz[i + 1], p);
+}
+
+ll hsh[maxn];
+ll get(int l, int r) {
+	return mul(sub(hsh[r], hsh[l - 1]), invz[l - 1]);
+}
