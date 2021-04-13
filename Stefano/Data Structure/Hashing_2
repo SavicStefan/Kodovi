@@ -1,0 +1,74 @@
+const int mod1 = 1e9 + 7;
+ll add1(ll a, ll b) {
+	return (a + b) % mod1;
+}
+ll sub1(ll a, ll b) {
+	return (a - b + mod1) % mod1;
+}
+ll mul1(ll a, ll b) {
+	return (a * b) % mod1;
+}
+ll power1(ll a, ll b) {
+	if(!b)return 1;
+	ll pola = power1(a, b / 2);
+	pola = mul1(pola, pola);
+	if(b % 2)pola = mul1(pola, a);
+	return pola;
+}
+ll inv1(ll a) {
+	return power1(a, mod1 - 2);
+}
+
+// --------------------------------------------------------------
+
+const int mod2 = 1e9 + 7;
+ll add2(ll a, ll b) {
+	return (a + b) % mod2;
+}
+ll sub2(ll a, ll b) {
+	return (a - b + mod2) % mod2;
+}
+ll mul2(ll a, ll b) {
+	return (a * b) % mod2;
+}
+ll power2(ll a, ll b) {
+	if(!b)return 1;
+	ll pola = power2(a, b / 2);
+	pola = mul2(pola, pola);
+	if(b % 2)pola = mul2(pola, a);
+	return pola;
+}
+ll inv2(ll a) {
+	return power2(a, mod1 - 2);
+}
+
+const int p1 = 31;
+const int p2 = 33;
+ll pw1[maxn];
+ll pw2[maxn];
+ll invz1[maxn];
+ll invz2[maxn];
+void init_hsh() {
+	pw1[0] = 1;
+	pw2[0] = 1;
+	ff(i,1,maxn - 1) {
+		pw1[i] = mul1(pw1[i - 1], p1);
+		pw2[i] = mul2(pw2[i - 1], p2);
+	}
+	invz1[maxn - 1] = inv1(pw1[maxn - 1]);
+	invz2[maxn - 1] = inv2(pw2[maxn - 1]);
+	fb(i,maxn - 2, 0) {
+		invz1[i] = mul1(invz1[i + 1], p1);
+		invz2[i] = mul2(invz2[i + 1], p2);
+	}
+}
+
+ll hsh1[maxn];
+ll get1(int l, int r) {
+	return mul1(sub1(hsh1[r], hsh1[l - 1]), invz1[l - 1]);
+}
+
+ll hsh2[maxn];
+ll get2(int l, int r) {
+	return mul2(sub2(hsh2[r], hsh2[l - 1]), invz2[l - 1]);
+}
