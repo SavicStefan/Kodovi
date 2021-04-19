@@ -7,6 +7,8 @@ ll f(line p, ll x) {
 	return p.k * A[x] + p.b;
 }
 
+//Marko je bio ovde
+
 line lch[4 * maxn];
 void add_line(int v, int tl, int tr, line x) {
 	ll a = f(lch[v], tl), b = f(x, tl), c = f(lch[v], tr), d = f(x, tr);
