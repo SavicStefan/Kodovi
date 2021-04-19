@@ -5,8 +5,9 @@ struct palindrom_tree {
     int a[maxn];
     int len[maxn];
     int num[maxn];
-    int fali[maxn];
+    int fail[maxn];
     int son[maxn][26];
+    int anc[maxn][26];
 
     int new_node(int X) {
         memset(son[idx], 0, sizeof(son[idx]));
@@ -16,17 +17,17 @@ struct palindrom_tree {
     }
 
     void init() {
+        N = 0;
+        last = 0;
         idx = 0;
         new_node(0);
         new_node(-1);
-        last = 0;
-        N = 0;
         a[N] = -1;
-        fali[0] = 1;
+        fail[0] = 1;
     }
 
-    int get_fali(int X) {
-        while(a[N - len[X] - 1] != a[N])X = fali[X];
+    int get_fail(int X) {
+        while(a[N - len[X] - 1] != a[N])X = fail[X];
         return X;
     }
 
@@ -34,16 +35,32 @@ struct palindrom_tree {
         X -= 'a';
         a[++N] = X;
 
-        int cur = get_fali(last);
+        int cur = get_fail(last);
         if(!son[cur][X]) {
             int nw = new_node(len[cur] + 2);
-            fali[nw] = son[get_fali(fali[cur])][X];
+            fail[nw] = son[get_fail(fail[cur])][X];
+            num[nw] = num[fail[nw]] + 1;
             son[cur][X] = nw;
-            num[nw] = num[fali[nw]] + 1;
         }
 
         last = son[cur][X];
-
     }
-    
-};
+
+    void init_anc() {
+        ff(i,0,idx - 1)anc[i][0] = fail[i];
+        ff(j,1,25) {
+            ff(i,0,idx - 1)anc[i][j] = anc[anc[i][j - 1]][j - 1];
+        }
+    }
+
+    int get(int v, int w) {
+        if(len[v] <= w)return len[v];
+        fb(i,25,0) {
+            if(len[anc[v][i]] > w) {
+                v = anc[v][i];
+            }
+        }
+        return max(0, len[fail[v]]);
+    }
+
+} P;
