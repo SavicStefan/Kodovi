@@ -1,5 +1,5 @@
 -IOI
--Ovaj template tek prvi put kad budemo postali ljubicasti na Codeforces
+
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 #include <bits/stdc++.h>
