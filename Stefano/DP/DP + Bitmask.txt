@@ -1,3 +1,0 @@
-https://oj.uz/problem/view/COCI16_kronican
-
-Zbir mask-e: zbir[mask] = zbir[mask & (mask - 1)] + B[__builtin_ctz(mask)];
