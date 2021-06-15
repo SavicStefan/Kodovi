@@ -66,5 +66,9 @@ s[i ... |s| - x] == s[i + x ... |s|] (ako vazi ovo takodje je x period string-a 
 - gledati koliko cu naprimer taj broj updejtovati ili deliti i videti da nije mnogo i da moze naivno sa optimizacijom
 (https://oj.uz/problem/view/JOI15_sterilizing)
 
+- ako mozes nesto vise puta kao Knapsack za 1D, samo je obrnuto
+(https://atcoder.jp/contests/abc153/tasks/abc153_e)
+
+
 What to look when you are solving problem?
 	- 
