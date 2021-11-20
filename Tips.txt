@@ -75,5 +75,5 @@ s[i ... |s| - x] == s[i + x ... |s|] (ako vazi ovo takodje je x period string-a 
 - gledati nekad koliko max i min necega, i probati sa tim smanjiti slozenost ili neki dp omoguciti
 (https://atcoder.jp/contests/abc164/tasks/abc164_e)
 
-What to look when you are solving problem?
-	- 
+- u stablu moze biti jedan ili dva centroida, ako ima dva oni su povezani
+(https://codeforces.com/problemset/problem/1406/C)
