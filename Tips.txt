@@ -80,3 +80,8 @@ s[i ... |s| - x] == s[i + x ... |s|] (ako vazi ovo takodje je x period string-a 
 
 - 0-1 bfs
 (https://codeforces.com/problemset/problem/1063/B)
+
+- Dfs tree graph je stablo koje ima dodatne ivice koje spajaju cvor sa njegovi pretkom
+(https://codeforces.com/problemset/problem/263/D)
+
+
