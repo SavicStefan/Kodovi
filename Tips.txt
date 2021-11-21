@@ -86,3 +86,6 @@ s[i ... |s| - x] == s[i + x ... |s|] (ako vazi ovo takodje je x period string-a 
 
 - Ako hocu distance u directed graphu samo idem sve dok je d[u] > d[v] + 1
 (https://codeforces.com/problemset/problem/1320/B)
+
+- Mogu ici i od nazad u directed graph-u
+(https://codeforces.com/problemset/problem/721/C)
