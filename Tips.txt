@@ -5,87 +5,91 @@ What to look at Contest
 	- ako daje WA pogledaj da nije mozda int mali 
 
 Why i haven't been able to solve problem?
-- nisam gledao kad nesto dodam koliko to doprinosi resenju	  	  
+1. nisam gledao kad nesto dodam koliko to doprinosi resenju	  	  
 (https://codeforces.com/problemset/problem/1238/E)	
 
-- nisam uvideo kako mozemo jednu dimeziju dp "eskivirati", ondosno kako mi utice na resenje, obicno bude neki sort (barem sam taj slucaj jedini vidjao)
+2. nisam uvideo kako mozemo jednu dimeziju dp "eskivirati", ondosno kako mi utice na resenje, obicno bude neki sort (barem sam taj slucaj jedini vidjao)
 (https://codeforces.com/problemset/problem/1316/E)
 (https://codeforces.com/problemset/problem/1437/C)
 
-- uvek napisi zadatak u matematickom obliku sta se trazi mozda pomogne
+3. uvek napisi zadatak u matematickom obliku sta se trazi mozda pomogne
 (https://codeforces.com/contest/847/problem/D)
 
-- gledati kako ono sto traze moze da se napise ili protumaci drugacije
+4. gledati kako ono sto traze moze da se napise ili protumaci drugacije
 (https://codeforces.com/contest/847/problem/D)
 
-- x je period string-a s akko: s[i] = s[i + x], za i iz [1, |s| - x] <-> 
+5. x je period string-a s akko: s[i] = s[i + x], za i iz [1, |s| - x] <-> 
 s[i ... |s| - x] == s[i + x ... |s|] (ako vazi ovo takodje je x period string-a s) 
 
-- x mod p, ili broj ostaje isti ili ga smanjuje za bar pola
+6. x mod p, ili broj ostaje isti ili ga smanjuje za bar pola
 	r = x mod p
 	x = kp + r
 	1. k = 0 -> x = x mod p
  	2. k != 0 -> x mod p = r = 2r / r < (p + r) / 2 <= (kp + r) / 2 <= x / 2
 
-- malo se vise udubiti u slozenost nekad 
+7. malo se vise udubiti u slozenost nekad 
 (https://codeforces.com/contest/786/problem/C)
 
-- nisam proctio koliko query-a se pravi, od kog tipa
+8. nisam proctio koliko query-a se pravi, od kog tipa
 (https://codeforces.com/contest/707/problem/E)
 
-- inline trick, ne znam kako radi, ali samo staviti __attribute__((always_inline)) na pocetak funckija ja msm
+9. inline trick, ne znam kako radi, ali samo staviti __attribute__((always_inline)) na pocetak funckija ja msm
 (https://codeforces.com/contest/1000/problem/F)
 
-- ako treba nekada da izbrojimo koliko ima necega sa nekom osobinom, gledati koliko nema sa tom osobinom pa oduzeti od ukupno
+10. ako treba nekada da izbrojimo koliko ima necega sa nekom osobinom, gledati koliko nema sa tom osobinom pa oduzeti od ukupno
 (https://codeforces.com/problemset/problem/369/E)
 
-- ne mora samo SQRT biti da delim niz na blokove, moze i batching, a i da nesto delimo u zadatku na light i heavy, i preko toga da radimo (ovo je cak i najtezi tip SQRT po meni)
+11. ne mora samo SQRT biti da delim niz na blokove, moze i batching, a i da nesto delimo u zadatku na light i heavy, i preko toga da radimo (ovo je cak i najtezi tip SQRT po meni)
 (https://codeforces.com/contest/348/problem/C)
 (https://codeforces.com/contest/506/problem/D)
 
-- trick kod D&C 
+12. trick kod D&C 
 (https://codeforces.com/problemset/problem/834/D)
 
-- parallel binary search moze kao preko rekurzije, a moze i kao u blogu
+13. parallel binary search moze kao preko rekurzije, a moze i kao u blogu
 (https://oj.uz/problem/view/IZhO18_plan)
 (https://www.spoj.com/problems/METEORS/)
 
-- ako hocemo da dodamo edges od v do [l, r] ili obrnuto mozemo sa segmentnim 
+14. ako hocemo da dodamo edges od v do [l, r] ili obrnuto mozemo sa segmentnim 
 (https://robert1003.github.io/2020/02/14/graphs-and-segment-tree.html)
 (https://codeforces.com/contest/787/problem/D)
 
-- nekad greedy gledati samo naprimer sta ako ovo koristim A puta, i prema tome praviti resenje
+15. nekad greedy gledati samo naprimer sta ako ovo koristim A puta, i prema tome praviti resenje
 (http://codeforces.com/contest/799/problem/E)
 
-- opcije (treba malo bolje pogledati)
+16. opcije (treba malo bolje pogledati)
 (https://codeforces.com/contest/867/problem/E)
 
-- gledati kad bi nesto menjao naivno koliko operacija napravim (mozda se ispostavi da sve samo po jednom radim pa je vreme odlicno)
+17. gledati kad bi nesto menjao naivno koliko operacija napravim (mozda se ispostavi da sve samo po jednom radim pa je vreme odlicno)
 (https://oj.uz/problem/view/POI13_kon)
 
-- gledati koliko cu naprimer taj broj updejtovati ili deliti i videti da nije mnogo i da moze naivno sa optimizacijom
+18. gledati koliko cu naprimer taj broj updejtovati ili deliti i videti da nije mnogo i da moze naivno sa optimizacijom
 (https://oj.uz/problem/view/JOI15_sterilizing)
 
-- value for greatest common divisor in case if it decreases becomes at most half of the previous value
+19. value for greatest common divisor in case if it decreases becomes at most half of the previous value
 (https://codeforces.com/contest/475/problem/D)	
 
-- lepa kombinatorika, ako ne moze opsta formula da se dobije mozda moze da se koristi neki vec izracunati clanovi
+20. lepa kombinatorika, ako ne moze opsta formula da se dobije mozda moze da se koristi neki vec izracunati clanovi
 (https://atcoder.jp/contests/abc162/tasks/abc162_e)
 
-- gledati nekad koliko max i min necega, i probati sa tim smanjiti slozenost ili neki dp omoguciti
+21. gledati nekad koliko max i min necega, i probati sa tim smanjiti slozenost ili neki dp omoguciti
 (https://atcoder.jp/contests/abc164/tasks/abc164_e)
 
-- u stablu moze biti jedan ili dva centroida, ako ima dva oni su povezani
+22. u stablu moze biti jedan ili dva centroida, ako ima dva oni su povezani
 (https://codeforces.com/problemset/problem/1406/C)
 
-- 0-1 bfs
+23. 0-1 bfs
 (https://codeforces.com/problemset/problem/1063/B)
 
-- Dfs tree undirected graph je stablo koje ima ili nema dodatne ivice koje spajaju cvor sa njegovi pretkom
+24. Dfs tree undirected graph je stablo koje ima ili nema dodatne ivice koje spajaju cvor sa njegovi pretkom
 (https://codeforces.com/problemset/problem/263/D)
 
-- Ako hocu distance u directed graphu samo idem sve dok je d[u] > d[v] + 1
+25. Ako hocu distance u directed graphu samo idem sve dok je d[u] > d[v] + 1
 (https://codeforces.com/problemset/problem/1320/B)
 
-- Mogu ici i od nazad u directed graph-u
+26. Mogu ici i od nazad u directed graph-u
 (https://codeforces.com/problemset/problem/721/C)
+
+27. find x than minimize this sum |x - ai|, x = median of a
+(https://atcoder.jp/contests/abc127/tasks/abc127_f)
+
