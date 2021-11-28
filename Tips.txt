@@ -93,3 +93,6 @@ s[i ... |s| - x] == s[i + x ... |s|] (ako vazi ovo takodje je x period string-a 
 27. find x than minimize this sum |x - ai|, x = median of a
 (https://atcoder.jp/contests/abc127/tasks/abc127_f)
 
+28. za najdalji cvor od x je jedan od krajeva diametra tog stabla
+(kvalifikacije 1 2021/2022 5 zadatak)
+
