@@ -85,7 +85,7 @@ s[i ... |s| - x] == s[i + x ... |s|] (ako vazi ovo takodje je x period string-a 
 (https://codeforces.com/problemset/problem/263/D)
 
 25. Ako hocu distance u directed graphu samo idem sve dok je d[u] > d[v] + 1
-(https://codeforces.com/problemset/problem/1320/B)
+(https://codeforces.com/problemset/problem/1320/B) (https://atcoder.jp/contests/abc132/tasks/abc132_e)
 
 26. Mogu ici i od nazad u directed graph-u
 (https://codeforces.com/problemset/problem/721/C)
