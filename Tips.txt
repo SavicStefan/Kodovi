@@ -96,3 +96,6 @@ s[i ... |s| - x] == s[i + x ... |s|] (ako vazi ovo takodje je x period string-a 
 28. za najdalji cvor od x je jedan od krajeva diametra tog stabla
 (kvalifikacije 1 2021/2022 5 zadatak)
 
+29. gledati upper bound resenja
+(https://codeforces.com/problemset/problem/1307/D)
+
